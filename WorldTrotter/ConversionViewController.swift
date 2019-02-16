@@ -8,6 +8,7 @@
 
 import UIKit
 
+// This uses the UITextFieldDelegate
 class ConversionViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var celsiusLabel: UILabel!
     @IBOutlet var textField: UITextField!
@@ -31,6 +32,7 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
         updateCelsiusLabel()
     }
     
+    // This belongs to UITextFieldDelegate
     func textField(_ textField: UITextField,
                    shouldChangeCharactersIn range: NSRange,
                    replacementString string: String) -> Bool {
@@ -48,6 +50,15 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
             return false
         } else {
             return true
+        }
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        let temp = fahrenheitValue?.value
+        if let t = temp, t < 25.0 {
+            let alert = UIAlertController(title: "Brrr!", message: "\(t)F is cold", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
         }
     }
     
