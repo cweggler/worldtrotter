@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		46030541221B143800B5A9EF /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46030540221B143800B5A9EF /* MapKit.framework */; };
 		462172C6220A5613007A6549 /* ConversionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462172C5220A5613007A6549 /* ConversionViewController.swift */; };
 		465CBA462203258400D59D96 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465CBA452203258400D59D96 /* AppDelegate.swift */; };
 		465CBA4B2203258400D59D96 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 465CBA492203258400D59D96 /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		46030540221B143800B5A9EF /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		462172C5220A5613007A6549 /* ConversionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionViewController.swift; sourceTree = "<group>"; };
 		465CBA422203258400D59D96 /* WorldTrotter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorldTrotter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		465CBA452203258400D59D96 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -54,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46030541221B143800B5A9EF /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +77,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4603053F221B143800B5A9EF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				46030540221B143800B5A9EF /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		465CBA392203258400D59D96 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +92,7 @@
 				465CBA592203258600D59D96 /* WorldTrotterTests */,
 				465CBA642203258600D59D96 /* WorldTrotterUITests */,
 				465CBA432203258400D59D96 /* Products */,
+				4603053F221B143800B5A9EF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
