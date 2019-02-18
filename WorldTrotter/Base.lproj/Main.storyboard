@@ -115,8 +115,8 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="OON-c5-MNo" kind="relationship" relationship="viewControllers" id="g95-cz-CSD"/>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="sgL-Qg-1G2"/>
+                        <segue destination="OON-c5-MNo" kind="relationship" relationship="viewControllers" id="g95-cz-CSD"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vgP-oz-HaX" userLabel="First Responder" sceneMemberID="firstResponder"/>
