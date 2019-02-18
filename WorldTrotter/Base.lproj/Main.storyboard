@@ -47,7 +47,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="VEU-fe-vcb"/>
                                 </constraints>
-                                <color key="textColor" red="0.75050018492788706" green="0.24680481015779898" blue="0.30877752832352356" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="0.75" green="0.24664032246192608" blue="0.30536561817470109" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="70"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad"/>
                                 <connections>
@@ -56,7 +56,7 @@
                                 </connections>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" red="0.76148743597381063" green="0.7621567492579342" blue="0.96567231416702271" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.72941176470588232" green="0.72941176470588232" blue="0.92156862745098034" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="ijl-if-ysu" firstAttribute="top" secondItem="kuQ-oX-pYD" secondAttribute="bottom" constant="8" id="AHG-wS-9zb"/>

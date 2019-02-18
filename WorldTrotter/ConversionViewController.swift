@@ -31,12 +31,30 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
         
         print("ConversionViewController loaded its view.")
         
+        //this sets what the color is in daytime mode, not dark mode
+        self.view.backgroundColor = UIColor.init(red: 0.73, green: 0.73, blue: 0.92, alpha: 1)
+        
         updateCelsiusLabel()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         print("Convert View appears")
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        // This helps set up a Dark Mode, the background becomes a deeper shade of purple
+        let now = Date() // this gets the current Date and time
+        let hour = Calendar.current.component(.hour, from: now) // this gets the hour
+        if hour >= 17 {
+            // if the hour is 5pm-11pm change the color to this deeper purple
+            self.view.backgroundColor = UIColor.init(red: 0.19, green: 0.19, blue: 0.96, alpha: 1)
+        }
+        if hour >= 0 && hour <= 5 {
+            // if the hour is 12am-5am change the color to this deeper purple
+            self.view.backgroundColor = UIColor.init(red: 0.19, green: 0.19, blue: 0.96, alpha: 1)
+        }
+    }
+        
     
     // This belongs to UITextFieldDelegate
     func textField(_ textField: UITextField,
