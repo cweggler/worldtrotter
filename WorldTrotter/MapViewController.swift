@@ -14,4 +14,8 @@ class MapViewController: UIViewController {
         
         print("MapViewController loaded its view.")
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        print("map view appears")
+    }
 }

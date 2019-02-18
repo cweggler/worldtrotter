@@ -34,6 +34,10 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
         updateCelsiusLabel()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        print("Convert View appears")
+    }
+    
     // This belongs to UITextFieldDelegate
     func textField(_ textField: UITextField,
                    shouldChangeCharactersIn range: NSRange,
