@@ -112,12 +112,12 @@
 			isa = PBXGroup;
 			children = (
 				462172C5220A5613007A6549 /* ConversionViewController.swift */,
+				46030542221B1AD900B5A9EF /* MapViewController.swift */,
 				465CBA452203258400D59D96 /* AppDelegate.swift */,
 				465CBA492203258400D59D96 /* Main.storyboard */,
 				465CBA4C2203258500D59D96 /* Assets.xcassets */,
 				465CBA4E2203258500D59D96 /* LaunchScreen.storyboard */,
 				465CBA512203258500D59D96 /* Info.plist */,
-				46030542221B1AD900B5A9EF /* MapViewController.swift */,
 			);
 			path = WorldTrotter;
 			sourceTree = "<group>";
