@@ -5,12 +5,14 @@
 //  Created by Cara on 2/18/19.
 //  Copyright © 2019 Cara. All rights reserved.
 //
-
 import UIKit
 import MapKit
 
-class MapViewController: UIViewController {
+class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     var mapView: MKMapView!
+    
+    let locationManager = CLLocationManager()
+    
     
     override func loadView() {
         // create a map view
@@ -18,6 +20,20 @@ class MapViewController: UIViewController {
         
         // set it as *the* view of this view controller
         view = mapView
+        
+        // add a button
+        // got some help for this from this tutorial https://www.codevscolor.com/ios-create-button-programmatically/
+    
+        let button = UIButton(type: .system)
+        
+        let buttonX = 150
+        let buttonY = 150
+        let buttonWidth = 100
+        let buttonHeight = 50
+        
+        button.frame = CGRect(x: buttonX, y: buttonY, width: buttonWidth, height: buttonHeight)
+        button.setTitle("Where Am I?", for: .normal)
+        self.view.addSubview(button)
         
         // add a UISegmentedControl to allow the user to choose between different options for view
         let segmentedControl = UISegmentedControl(items: ["Standard", "Hybrid", "Satellite"])
