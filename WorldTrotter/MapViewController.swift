@@ -24,6 +24,9 @@ class MapViewController: UIViewController {
         segmentedControl.backgroundColor = UIColor.white.withAlphaComponent(0.5)
         segmentedControl.selectedSegmentIndex = 0
         
+        segmentedControl.addTarget(self,
+                                   action: #selector(MapViewController.mapTypeChanged(_:)), for: .valueChanged)
+        
         // this is to turn off the older auto-resizing mask so it doesn't conflict
         segmentedControl.translatesAutoresizingMaskIntoConstraints = false
         
@@ -49,5 +52,18 @@ class MapViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         print("map view appears")
+    }
+    
+    @objc func mapTypeChanged(_ segControl: UISegmentedControl){
+        switch segControl.selectedSegmentIndex {
+            case 0:
+                mapView.mapType = .standard
+            case 1:
+                mapView.mapType = .hybrid
+            case 2:
+                mapView.mapType = .satellite
+            default:
+                break
+        }
     }
 }
