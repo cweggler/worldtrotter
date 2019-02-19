@@ -91,6 +91,22 @@
             </objects>
             <point key="canvasLocation" x="953" y="951"/>
         </scene>
+        <!--Item-->
+        <scene sceneID="DAo-AK-90u">
+            <objects>
+                <viewController id="WDT-BZ-0kQ" customClass="ViewController" customModule="WorldTrotter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="x5n-fg-CrX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="6Hm-oR-FCl"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="yyM-eb-ohT"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JZM-Dw-ZSO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1892" y="950"/>
+        </scene>
         <!--Map-->
         <scene sceneID="rj6-D8-arJ">
             <objects>
@@ -107,12 +123,14 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="JgL-yG-3kl" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pua-TY-zws">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="sgL-Qg-1G2"/>
                         <segue destination="OON-c5-MNo" kind="relationship" relationship="viewControllers" id="g95-cz-CSD"/>
+                        <segue destination="WDT-BZ-0kQ" kind="relationship" relationship="viewControllers" id="0eG-CE-bMk"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vgP-oz-HaX" userLabel="First Responder" sceneMemberID="firstResponder"/>
