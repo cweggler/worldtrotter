@@ -32,7 +32,9 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         let buttonHeight = 50
         
         button.frame = CGRect(x: buttonX, y: buttonY, width: buttonWidth, height: buttonHeight)
+        button.backgroundColor = UIColor.white
         button.setTitle("Where Am I?", for: .normal)
+        button.addTarget(self, action: #selector(buttonClicked), for: .touchUpInside)
         self.view.addSubview(button)
         
         // add a UISegmentedControl to allow the user to choose between different options for view
@@ -62,12 +64,33 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         print("MapViewController loaded its view.")
+        
+        //found this from 
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
         print("map view appears")
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus){
+        if status == .authorizedWhenInUse {
+            mapView.showsUserLocation = true
+            moveToCurrentLocation()
+        } else {
+            let alert = UIAlertController(title: "Can't display location", message: "Please grant permission in settings", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK",
+                                          style: .default,
+                                          handler: { (action: UIAlertAction) -> Void in UIApplication.shared.open(URL(string: UIApplication.openSettingsURLString)!) } ))
+            present(alert, animated: true, completion: nil)
+        }
+    }
+    
+    func moveToCurrentLocation(){
+        if let location = locationManager.location {
+            mapView.setCenter(location.coordinate, animated: true)
+        }
     }
     
     @objc func mapTypeChanged(_ segControl: UISegmentedControl){
@@ -81,5 +104,12 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
             default:
                 break
         }
+    }
+    
+    @objc func buttonClicked(sender: UIButton){
+        print("The button was clicked")
+        locationManager.delegate = self
+        locationManager.requestWhenInUseAuthorization()
+        mapView.delegate = self
     }
 }
